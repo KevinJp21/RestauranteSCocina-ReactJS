@@ -4,6 +4,78 @@
     box-sizing: border-box;
 }
 
+html ::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html ::-webkit-scrollbar-thumb{
+    background: yellow;
+    border-radius: 10px;
+}
+
+html ::-webkit-scrollbar{
+    width: 10px;
+}
+
+/*navBar*/
+
+#navbar{
+    background-color: black;
+}
+
+#logo{
+    font-family: 'Arima Madurai', cursive;
+    color: #f7f5f2;
+    margin-left: 40px;
+}
+
+.yellow{
+    color: yellow;
+}
+
+.blue{
+    color: #006eff;
+}
+
+.red{
+    color: red;
+}
+
+.bars{
+    font-size: 50px;
+    color: #f7f5f2;
+}
+
+
+.nav-link{
+    font-family: 'Mulish', sans-serif;
+    color: #f7f5f2;
+    margin-left: 10px;
+    font-weight: bold;
+    transition:  0.5s;
+}
+
+.nav-link:hover{
+    border-radius: 5px;
+    color: #006eff;
+} 
+
+#navbar form button{
+    font-family: 'Mulish', sans-serif;
+    background: #006eff;
+    color: white;
+    transition: .5s;
+    cursor: pointer;
+    border: none;
+}
+
+.navcontent{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
 .menu{
     display: flex;
     flex-wrap: wrap;
