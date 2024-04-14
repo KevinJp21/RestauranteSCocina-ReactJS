@@ -9,6 +9,7 @@ import {
   MDBCardBody,
   MDBCardImage,
   MDBIcon,
+  MDBBtn
 } from "mdb-react-ui-kit";
 
 
@@ -30,7 +31,7 @@ function dishRating({ data }) {
     }
   
     return (
-      <div className="ms-auto">
+      <div className="ms-auto stars">
         {stars}
       </div>
     );
@@ -40,7 +41,7 @@ function dishRating({ data }) {
   return (
     <>
     <MDBCol md="12" lg="4" className="mb-4 mb-lg-0 card">
-          <MDBCard>
+          <MDBCard className='card-body'>
             <MDBCardImage
               src={data.img}
               position="top"
@@ -62,13 +63,12 @@ function dishRating({ data }) {
                 <h5 className="mb-0">{data.nombre}</h5>
                 <h5 className="text-dark mb-0">${data.precio}</h5>
               </div>
-
-              <div className="d-flex justify-content-between mb-2">
-                <p className="text-muted mb-0">
-                 Popularidad
-                </p>
                 {dishRating({data})}
+              <div className="buy">
+              <button className='btn btn-buy'> Comprar</button>
+              <button className='cart'><i className="fa-solid fa-cart-shopping"></i></button>
               </div>
+              
             </MDBCardBody>
           </MDBCard>
         </MDBCol>
