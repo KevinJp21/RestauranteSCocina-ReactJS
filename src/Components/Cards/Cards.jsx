@@ -40,7 +40,7 @@ function dishRating({ data }) {
   function Cards({ data }) {
   return (
     <>
-    <MDBCol md="12" lg="4" className="mb-4 mb-lg-0 card">
+    <MDBCol  md="6" lg="4" className="container-fluid m-0 mb-3">
           <MDBCard className='card-body'>
             <MDBCardImage
               src={data.img}
