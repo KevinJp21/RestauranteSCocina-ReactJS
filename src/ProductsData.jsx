@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import Cards from './Cards';
 
-function CardData() {
-  const [datas, setData] = useState([]);
+function ProductData({ url, render }) {
+  const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost/API-Foods/getFood.php')
+    fetch(url)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -20,20 +19,12 @@ function CardData() {
         setError(error.message);
       })
       .finally(() => setLoading(false));
-  }, []);
+  }, [url]);
 
   if (loading) return <p>Cargando...</p>;
   if (error) return <p>Error: {error}</p>;
 
-  return (
-    <>
-      {datas.length > 0 ? (
-        datas.map(data => <Cards key={data.id} data={data} />)
-      ) : (
-        <p>No hay datos disponibles.</p>
-      )}
-    </>
-  );
+  return render(data);
 }
 
-export default CardData;
+export default ProductData;
