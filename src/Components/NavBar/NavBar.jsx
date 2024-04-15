@@ -4,10 +4,10 @@ const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg" id="navbar">
       <div className="container-fluid" id="container-fluid">
-        <a className="navbar-brand fs-2" href="#" id="logo">
-          Restaurante S <span className="yellow fs-2">Co</span>
-          <span className=" blue fs-2">ci</span>
-          <span className="red fs-2">na</span>
+        <a className="navbar-brand fs-3" href="#" id="logo">
+          Restaurante S <span className="yellow fs-3">Co</span>
+          <span className=" blue fs-3">ci</span>
+          <span className="red fs-3">na</span>
         </a>
 
         <button

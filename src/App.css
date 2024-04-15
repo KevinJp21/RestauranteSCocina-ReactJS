@@ -17,10 +17,14 @@ html ::-webkit-scrollbar{
     width: 10px;
 }
 
-/*navBar*/
+/*NavBar*/
 
 #navbar{
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
 }
 
 #logo{
@@ -74,6 +78,15 @@ html ::-webkit-scrollbar{
 
 }
 
+/*Home*/
+
+#home{
+    background-color: red;
+    height: 90vh;
+}
+
+/*Menu*/
+
 .menu{
     display: flex;
     margin-top: 60px;
@@ -113,6 +126,7 @@ flex-wrap: wrap;
 
 .stars i{
     font-size: 20px;
+    color: red;
 }
 
 .buy{
@@ -123,6 +137,7 @@ flex-wrap: wrap;
 
 .cart{
     border: none;
+    background-color: #00000000;
 }
 
 .cart i{
