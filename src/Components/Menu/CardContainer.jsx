@@ -5,9 +5,14 @@ import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { MDBContainer } from "mdb-react-ui-kit";
 //Popularidad
-const CardContainer = () => {
+const Menu = () => {
   return (
     <section className="menu">
+      <div className="container" id="container">
+            <div className="title">
+            <h2 id="heading">Nuestro <span>menú</span></h2>
+            </div>
+        </div>
       <MDBContainer>
         <div className="card-container">
           <ProductData
@@ -28,5 +33,5 @@ const CardContainer = () => {
   );
 };
 
-export default CardContainer;
+export default Menu;
 //http://localhost/Apiresidencia/getpropietario.php
