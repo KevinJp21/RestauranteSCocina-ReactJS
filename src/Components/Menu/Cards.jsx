@@ -47,7 +47,7 @@ function dishRating({ data }) {
             <MDBCardImage
               src={data.img}
               position="top"
-              alt="Gaming Laptop"
+              alt={data.nombre}
             />
             <MDBCardBody>
               <div className="d-flex justify-content-between">
