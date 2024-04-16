@@ -5,3 +5,58 @@
     background-size: cover;
     background-position: 88%;
 }
+
+h1,h2,h3, p{
+    font-family: 'Mulish',sans-serif;
+    color: yellow;
+}
+
+#home .content{
+    padding-top: 150px;
+    margin-left: 56px;
+}
+
+#home .content h3{
+    font-family: 'Mulish',sans-serif;
+    font-size: 60px;
+}
+
+#home .content p{
+    margin-top: 10px;
+    font-size: 30px;
+    color: white;
+    width: 50%;
+}
+
+#btn-home{
+    width: 200px;
+    height: 50px;
+}
+
+@media (max-width: 777px) {
+    #home .content h3{
+        width: 100%;
+        font-size: 50px;
+    }
+
+    #home .content p{
+        width: 90%;
+        font-size: 20px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    #home .content h3{
+        font-size: 35px;
+    }
+
+    #home .content p{
+        font-size: 20px;
+    }
+
+    #btn-home{
+        font-size: 15px;
+        width: 150px;
+        height: 40px;
+    }
+  }

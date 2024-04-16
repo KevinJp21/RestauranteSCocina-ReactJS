@@ -17,7 +17,7 @@
 }
 
 .blue{
-    color: #006eff;
+    color: rgb(0, 140, 255);;
 }
 
 .red{
@@ -50,12 +50,12 @@
 
 #nav-link:hover{
     border-radius: 5px;
-    color: #006eff;
+    color: rgb(0, 140, 255);;
 } 
 
 #navbar form button{
     font-family: 'Mulish', sans-serif;
-    background: #006eff;
+    background: rgb(0, 140, 255);;
     color: white;
     transition: .5s;
     cursor: pointer;
