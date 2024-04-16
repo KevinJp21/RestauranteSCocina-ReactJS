@@ -12,6 +12,8 @@ import {
   MDBBtn
 } from "mdb-react-ui-kit";
 
+import './menu.css'
+
 
 function dishRating({ data }) {
     const rating = data.popularidad;

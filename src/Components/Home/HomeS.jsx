@@ -7,7 +7,6 @@ const Home = () => {
     <ProductData
         url="http://localhost/API-Foods/getFood.php"
         render={(data) => {
-            console.log(data)
           return (
             <>
              {data.length > 0 ? (

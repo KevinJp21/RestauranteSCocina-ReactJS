@@ -1,0 +1,76 @@
+/*Menu*/
+
+.menu{
+    display: flex;
+    margin-top: 60px;
+}
+
+.card {
+    overflow: hidden;
+    padding: 5px;
+}
+
+.card-body{
+border-bottom: 2px solid rgb(0, 102, 255);
+}
+
+.card-img-top{
+  height: 240px;
+  object-fit: cover;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+.card-img-top:hover{
+    transform: scale(1.1);
+  }
+
+.card-container{
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+}
+
+.stars{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+}
+
+.stars i{
+    font-size: 20px;
+    color: red;
+}
+
+.buy{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.cart{
+    border: none;
+    background-color: #00000000;
+}
+
+.cart i{
+    color: rgb(0, 140, 255);
+    font-size: 30px;
+    transition: .2s ease-in-out;
+}
+
+.btn-buy{
+    color: white;
+    background-color: rgb(0, 140, 255);
+    transition: .2s ease-in-out;
+}
+
+.btn-buy:hover{
+    color: white;
+    background-color: rgb(255, 0, 0);
+}
+
+.cart i:hover{
+    color: rgb(255, 0, 0);
+    font-size: 30px;
+}

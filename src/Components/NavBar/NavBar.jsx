@@ -4,10 +4,10 @@ const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg" id="navbar">
       <div className="container-fluid" id="container-fluid">
-        <a className="navbar-brand fs-3" href="#" id="logo">
-          Restaurante S <span className="yellow fs-3">Co</span>
-          <span className=" blue fs-3">ci</span>
-          <span className="red fs-3">na</span>
+        <a className="navbar-brand f-lg-5 ms-lg-5 " href="#" id="logo">
+          Restaurante S <span className="yellow">Co</span>
+          <span className="blue">ci</span>
+          <span className="red">na</span>
         </a>
 
         <button
@@ -20,22 +20,22 @@ const NavBar = () => {
           aria-label="Toggle navigation"
         >
           <span>
-            <i className="fa-solid fa-bars fs-1 bars"></i>
+            <i className="fa-solid fa-bars bars"></i>
           </span>
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <div className="navbar-nav ms-auto mb-2 mb-lg-0 navcontent">
-              <a className="nav-link fs-5 lg-fs-5" aria-current="page" href="#home">
+          <div className="navbar-nav ms-auto mb-2 mb-lg-0 me-lg-5 navcontent">
+              <a className="fs-5" id="nav-link" aria-current="page" href="#home">
                 Inicio
               </a>
-              <a className="nav-link fs-5" href="#about">
+              <a className="fs-5" id="nav-link" href="#about">
                 Sobre nosotros
               </a>
-              <a className="nav-link fs-5" href="#menu">
+              <a className="fs-5" id="nav-link" href="#menu">
                 Menú
               </a>
-              <a className="nav-link fs-5" href="#contact">
+              <a className="fs-5" id="nav-link" href="#contact">
                 Contactanos
               </a>
           </div>
