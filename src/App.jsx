@@ -2,7 +2,9 @@ import React from 'react';
 import './App.css'
 import NavBar from './Components/NavBar/NavBar';
 import Home from './Components/Home/HomeS';
-import CardContainer from './Components/Cards/CardContainer';
+import About from './Components/About/About';
+import CardContainer from './Components/Menu/CardContainer';
+
 
 
 function App() {
@@ -10,6 +12,7 @@ function App() {
     <>
       <NavBar />
       <Home />
+      <About />
       <CardContainer />
     </>
   );
