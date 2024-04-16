@@ -7,7 +7,7 @@ import { MDBContainer } from "mdb-react-ui-kit";
 //Popularidad
 const Menu = () => {
   return (
-    <section className="menu">
+    <section className="menu" id="menu">
       <div className="container" id="container">
             <div className="title">
             <h2 id="heading">Nuestro <span>menú</span></h2>

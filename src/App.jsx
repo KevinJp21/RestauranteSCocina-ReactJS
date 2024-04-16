@@ -6,7 +6,7 @@ import About from './Components/About/About';
 import PopularDish from './Components/PopularDish/PopularDish';
 import Menu from './Components/Menu/CardContainer';
 import Footer from './Components/Footer/Footer';
-
+import InfiniteScroll from 'react-infinite-scroll-component';
 
 
 function App() {
