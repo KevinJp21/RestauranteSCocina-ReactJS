@@ -19,7 +19,7 @@ const PopularDish = () => {
         return(
             <>
             {sortedData.map((data) =>
-                <div key={data.id} className='col-md-4 py-3 py-md-0' id="top-dish"> 
+                <div key={data.id} className='col-md-6 col-lg-4 m-0 mb-3' id="top-dish"> 
                         <img src={data.img} alt={data.nombre} id="img_top" />
                 </div>
             )}

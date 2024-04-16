@@ -6,8 +6,9 @@
     padding-top: 70px;
 }
 
-#top-dish{
-    width: 33.3%;
+#container-popular-dish{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #top-dish img{
