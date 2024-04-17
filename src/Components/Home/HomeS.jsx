@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <>
     <ProductData
-        url="http://localhost/API-Foods/getFood.php"
+        url="https://hoteless-hilton.000webhostapp.com/getFood.php"
         render={(data) => {
           return (
             <>

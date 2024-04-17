@@ -11,7 +11,7 @@ const PopularDish = () => {
             </div>
             <div className="row" id="container-popular-dish">
            <ProductData
-    url="http://localhost/API-Foods/getFood.php"
+    url="https://hoteless-hilton.000webhostapp.com/getFood.php"
     render={(data) => {
        if(data && data.length > 0) {
         //Se ordenan los datos de mayor a menor segun la cantidad vendida

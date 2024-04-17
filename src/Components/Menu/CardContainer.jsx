@@ -16,7 +16,7 @@ const Menu = () => {
       <MDBContainer>
         <div className="card-container">
           <ProductData
-            url="http://localhost/API-Foods/getFood.php"
+            url="https://hoteless-hilton.000webhostapp.com/getFood.php"
             render={(data) => (
               <>
                 {data.length > 0 ? (
@@ -34,4 +34,3 @@ const Menu = () => {
 };
 
 export default Menu;
-//http://localhost/Apiresidencia/getpropietario.php
