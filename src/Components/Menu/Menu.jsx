@@ -32,6 +32,8 @@ const Menu = () => {
             <option value="">Todas las categorías</option>
             <option value="Plato principal">Plato principal</option>
             <option value="Entrada">Entrada</option>
+            <option value="Bebida">Bebida</option>
+            <option value="Postre">Postre</option>
           </select>
           </div>
         </div>
