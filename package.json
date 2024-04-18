@@ -2,7 +2,7 @@
   "name": "restaurantescocina-reactjs",
   "private": true,
   "version": "0.0.0",
-  "homepage":"https://kevinjp21.github.io/RestauranteSCocina-ReactJS/dist",
+  "homepage":"https://kevinjp21.github.io/RestauranteSCocina-ReactJS/dist/",
   "type": "module",
   "scripts": {
     "dev": "vite",
