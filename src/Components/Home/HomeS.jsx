@@ -21,7 +21,7 @@ const Home = () => {
                         <h3>
                           Mejora tu día con 
                           <br />
-                          comida 100% Costeña
+                          comida 100% Colombiana
                         </h3>
                         <p>
                         Explora la diversidad de sabores de Colombia a través de nuestros platos, que te llevarán desde las montañas de los Andes hasta las costas del Caribe.
