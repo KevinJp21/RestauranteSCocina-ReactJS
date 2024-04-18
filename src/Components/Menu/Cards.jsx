@@ -1,6 +1,6 @@
 import React from 'react'
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
-import "@fortawesome/fontawesome-free/css/all.min.css";
+import { Rating } from '@mui/material';
 import {
   MDBContainer,
   MDBRow,
@@ -23,6 +23,7 @@ function dishRating({ data }) {
       if (i <= rating) {
         // Agrega una estrella completa con una clave única
         stars.push(<MDBIcon key={`star-full-${i}`} fas icon="star" />);
+        <rating name="read-only" defaultValue={2.5} prescision={0.5} />
       } else if (i - 1 < rating && i > rating) {
         // Agrega una media estrella
         stars.push(<MDBIcon key={`star-half-${i}`} fas icon="star-half-alt" />);
