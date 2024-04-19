@@ -1,16 +1,28 @@
 #navbar{
-    background-color: black;
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-  
+    position: fixed;
+    box-shadow: none;
+    transition: background-color .3s;
+    z-index: 1000;
 }
 
+#container-fluid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.scrolled{
+    background-color: black !important;
+}
 #logo{
     font-family: 'Arima Madurai', cursive;
-    color: #f7f5f2;
-    font-size: 26px;
+    font-size: 20px;
+    color: white ;
 }
 
 .yellow{
@@ -18,52 +30,111 @@
 }
 
 .blue{
-    color: rgb(0, 140, 255);;
+    color: rgb(0, 140, 255);
 }
 
 .red{
     color: red;
 }
 
-.bars{
-    font-size: 30px;
-    color: #f7f5f2;
+#ContainerNavContent{
+    display: flex;
+
 }
 
-@media (max-width: 330px) {
-    #logo{
-      font-size: 20px;
-    }
-
-    .bars{
-        font-size: 25px;
-    }
-  }
-
-
-#nav-link{
-    font-family: 'Mulish', sans-serif ;
-    color: #f7f5f2;
-    margin-left: 10px;
-    font-weight: bold;
-    transition:  0.5s;
+#locationContent{
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
-#nav-link:hover{
-    border-radius: 5px;
-    color: rgb(0, 140, 255);;
-} 
+#locationIcon{
+    font-size: 20px;
+    color: yellow;
+}
 
-#navbar form button{
-    font-family: 'Mulish', sans-serif;
-    background: rgb(0, 140, 255);;
+#locationName{
+    font-family: 'Mulish',sans-serif;
     color: white;
-    transition: .5s;
+    font-size: 13px;
+}
+
+#locationContent-show{
+    display: none;
+}
+
+#userContentLogin a{
+    display: flex;
+    gap: 10px;
+    align-items: center;
     cursor: pointer;
+}
+
+#userContentLogin:hover i,#userContentLogin:hover span{
+    color: rgb(0, 140, 255) !important;
+}
+
+#userIcon{
+    font-size: 20px;
+    color: white;
+    transition: .3s;
+}
+
+#userContentLogin #login{
+    font-family: 'Mulish',sans-serif;
+    color: white;
+    font-size: 13px;
+    transition: .3s;
+}
+
+#cartShopping{
+    width: 50x;
+    padding: 4px;
+
+}
+
+#cartShopping button{
+    width: 100%;
+    background-color: transparent;
     border: none;
 }
 
-#navbarSupportedContent .navcontent{
-    justify-content: center !important;
-    align-items: center !important;
+#cartShopping button i{
+    color: white;
+    transition: .3s;
 }
+
+#cartShopping button i:hover{
+    color: rgb(0, 140, 255);
+}
+
+
+@media (max-width: 992px) {
+    #locationContent{
+        display: none;
+    }
+
+    #locationContent-show{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+    }
+}
+
+@media (max-width: 400px) {
+    #userContentLogin span{
+        display: none;
+    }
+
+    #logo{
+        font-size: 15px;
+    }
+
+    #locationContent-show span, #locationContent-show i {
+        font-size: 10px;
+    }
+}
+  

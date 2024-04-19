@@ -1,51 +1,57 @@
-import React from "react";
+import React, {useEffect, useState } from "react";
 import './NavBar.css'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Style } from "@mui/icons-material";
 const NavBar = () => {
+  const [scroll, setScroll] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      // Cambia el estado basado en la posición del scroll
+      if (window.scrollY > 50) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
+
+    // Evento para detectar scroll
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   return (
-    <nav className="navbar navbar-expand-lg" id="navbar">
+    <nav className={`navbar navbar-expand-lg ${scroll ? 'scrolled' : ''}`} id="navbar">
       <div className="container-fluid" id="container-fluid">
         <a className="navbar-brand f-lg-5 ms-lg-5 " href="#" id="logo">
           Restaurante S <span className="yellow">Co</span>
           <span className="blue">ci</span>
           <span className="red">na</span>
         </a>
-
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span>
-            <i className="fa-solid fa-bars bars"></i>
-          </span>
-        </button>
-
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <div className="navbar-nav ms-auto mb-2 mb-lg-0 me-lg-5 navcontent">
-              <a className="fs-5" id="nav-link" aria-current="page" href="#home">
-                Inicio
-              </a>
-              <a className="fs-5" id="nav-link" href="#about">
-                Sobre nosotros
-              </a>
-              <a className="fs-5" id="nav-link" href="#menu">
-                Menú
-              </a>
-              <a className="fs-5" id="nav-link" href="#contact">
-                Contactanos
-              </a>
-              <div className="cart" id="cart">
-                  <button className="btn-cart" id="btn-cart">
-                  <i className="fa-solid fa-cart-shopping" id="card-icon"></i>
-                  </button>
-              </div>
+          <div className="locationContent " id="locationContent">
+          <i className="fa-solid fa-location-dot" id="locationIcon"></i>
+            <span id="locationName">Barranquilla, Atlantico, Colombia</span>
           </div>
+
+          <div className="userContentLogin ms-auto" id="userContentLogin">
+          <a className="" id="">
+            <i className="fa-solid fa-user-circle" id="userIcon"></i>
+            <span id="login">Iniciar sesión</span>
+          </a>
+          </div>
+
+          <div className="cartShopping" id="cartShopping">
+            <button><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+
+          <div className="locationContent-show col-12" id="locationContent-show">
+          <i className="fa-solid fa-location-dot" id="locationIcon"></i>
+            <span id="locationName">Barranquilla, Atlantico, Colombia</span>
+          </div>
+
+
+          
         </div>
-      </div>
     </nav>
   );
 };
