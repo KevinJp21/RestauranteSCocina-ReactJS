@@ -41,7 +41,7 @@ const NavBar = () => {
           </div>
 
           <div className="cartShopping" id="cartShopping">
-            <button><i class="fa-solid fa-cart-shopping"></i></button>
+            <button><i className="fa-solid fa-cart-shopping"></i></button>
           </div>
 
           <div className="locationContent-show col-12" id="locationContent-show">
