@@ -44,6 +44,12 @@ const NavBar = () => {
             <button><i className="fa-solid fa-cart-shopping"></i></button>
           </div>
 
+          <div className="bars" id="bars">
+            <button className="btnBars" id="btnBars">
+            <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+
           <div className="locationContent-show col-12" id="locationContent-show">
           <i className="fa-solid fa-location-dot" id="locationIcon"></i>
             <span id="locationName">Barranquilla, Atlantico, Colombia</span>
