@@ -62,8 +62,8 @@ function dishRating({ data }) {
                 </p>
               </div>
 
-              <div className="d-flex justify-content-between mb-3" id="contentItem">
-                <h5 className="mb-0" id='itemName'>{data.nombre}</h5>
+              <div className="d-flex justify-content-between mb-3">
+                <h5 className="mb-0">{data.nombre}</h5>
                 <h5 className="text-dark mb-0">${data.precio}</h5>
               </div>
                 {dishRating({data})}

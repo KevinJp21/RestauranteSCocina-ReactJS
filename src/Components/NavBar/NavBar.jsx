@@ -38,6 +38,11 @@ const NavBar = () => {
               <a className="fs-5" id="nav-link" href="#contact">
                 Contactanos
               </a>
+              <div className="cart" id="cart">
+                  <button className="btn-cart" id="btn-cart">
+                  <i className="fa-solid fa-cart-shopping" id="card-icon"></i>
+                  </button>
+              </div>
           </div>
         </div>
       </div>

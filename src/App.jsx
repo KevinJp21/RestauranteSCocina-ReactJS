@@ -7,7 +7,6 @@ import PopularDish from './Components/PopularDish/PopularDish';
 import Menu from './Components/Menu/Menu';
 import Footer from './Components/Footer/Footer';
 import Contact from './Components/Contact/Contact';
-import DiscreteSlider from './Components/Menu/DiscreteSlider';
 
 
 function App() {
@@ -20,6 +19,7 @@ function App() {
       <Menu />
       <Contact />
       <Footer />
+
     </>
   );
 }

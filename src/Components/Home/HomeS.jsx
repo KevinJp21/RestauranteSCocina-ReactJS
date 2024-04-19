@@ -26,7 +26,7 @@ const Home = () => {
                         <p>
                         Explora la diversidad de sabores de Colombia a través de nuestros platos, que te llevarán desde las montañas de los Andes hasta las costas del Caribe.
                         </p>
-                        <button className='btn btn-buy' id="btn-home">Pide ahora!</button>
+                        <button className='btn btn-buy' id="btn-home">¡Pide ahora!</button>
                     </div>
                   </section>
                 ))
