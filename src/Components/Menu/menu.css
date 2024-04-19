@@ -175,6 +175,13 @@ flex-wrap: wrap;
     font-size: 30px;
 }
 
+#contentItem{
+    height: 50px;
+    align-items: center;
+    gap: 5px;
+}
+
+
 @media (max-width: 400px) {
     .btn-buy{
         font-size: 10px ;

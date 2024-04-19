@@ -60,7 +60,7 @@ const Menu = () => {
                         .slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)/*Toma 2 argumentos, el de inicio y el final */
                         .map(dish => <Cards key={dish.id} data={dish} />)/*Renderizarlos datos */
                       }
-                      <Pagination className="mt-4"
+                      <Pagination className="col-12 mt-4"
                         count={Math.ceil(filteredData.length / itemsPerPage)}
                         page={currentPage}
                         onChange={handleChangePage}
