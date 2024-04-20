@@ -219,11 +219,14 @@ padding: 16px 0 16px 0;
 @media (max-width: 400px) {
     #sideBarContainer {
         min-width: 100%;
+        overflow: auto;
     }
 
     #BtnSign{
         font-size: 12px;
     }
+
+    
 
 }
   
