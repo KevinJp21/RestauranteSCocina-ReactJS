@@ -1,19 +1,31 @@
 import React, {useEffect, useState } from "react";
 import './NavBar.css'
+import './Basket.css'
 import './sideBar.css'
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);  // Inicialmente el sidebar está cerrado
+  const [isOpenSideBar, setIsOpenSideBar] = useState(false);  // Inicialmente el sidebar está cerrado
+  const [isOpenBasket, setIsOpenBasket] = useState(false);  // Inicialmente el sidebar está cerrado
   const [scroll, setScroll] = useState(false);
 
   // Función para abrir el sidebar
   const handleOpenSidebar = () => {
-    setIsOpen(true);
+    setIsOpenSideBar(true);
   };
 
   // Función para cerrar el sidebar
   const handleCloseSidebar = () => {
-    setIsOpen(false);
+    setIsOpenSideBar(false);
+  };
+
+   // Función para abrir el carrito
+   const handleOpenBasket = () => {
+    setIsOpenBasket(true);
+  };
+
+  // Función para cerrar el carrito
+  const handleCloseBasket = () => {
+    setIsOpenBasket(false);
   };
 
   useEffect(() => {
@@ -36,9 +48,8 @@ const NavBar = () => {
 
   return (
     <> 
-    <div className={`DarkOverlay ${isOpen ? 'DarkOverlayOpen' : ''}`} id="DarkOverlay" onClick={handleCloseSidebar}></div>
-      <div className={`sideBarContainer ${isOpen ? 'sideBarOpen' : ''}`} id="sideBarContainer">
-        
+    <div className={`DarkOverlay ${isOpenSideBar ? 'DarkOverlayOpen' : ''}`} id="DarkOverlay" onClick={handleCloseSidebar}></div>
+      <div className={`sideBarContainer ${isOpenSideBar ? 'sideBarOpen' : ''}`} id="sideBarContainer">
         <div className="sideBarContent">
           
           <div className="section1" id="section1">
@@ -139,8 +150,21 @@ const NavBar = () => {
           <div className="lineWrapper"></div>
         </div>
       </div>
+      <div className={`DarkOverlayBasket ${isOpenBasket ? 'DarkOverlayBasketOpen' : ''}`} id="DarkOverlayBasket" onClick={handleCloseBasket}></div>
+      <div className={`basketContainer ${isOpenBasket ? 'basketOpen' : ''}`} id="basketContainer">
+          <div className="basketLogo" id="basketLogo">
+             <span>Tu carrito</span>
+             <button className="closeBasket" id="closeBasket" onClick={handleCloseBasket}>
+              <i className="fa-solid fa-circle-xmark"></i>
+            </button>
+          </div>
+
+          <div className="locationBasketContent " id="locationBasketContent">
+            <i className="fa-solid fa-location-dot" id="locationIcon"></i>
+            <span id="locationBasket">Barranquilla, Atlantico, Colombia</span>
+          </div>
+      </div>
  
-  
     <nav className={`navbar navbar-expand-lg ${scroll ? 'scrolled' : ''}`} id="navbar">
         <div className="container-fluid m-0" id="container-fluid">
 
@@ -163,7 +187,7 @@ const NavBar = () => {
           </div>
 
           <div className="cartShopping" id="cartShopping">
-            <button><i className="fa-solid fa-cart-shopping"></i></button>
+            <button className="btnBasket" id="btnBasket" onClick={handleOpenBasket}><i className="fa-solid fa-cart-shopping"></i></button>
           </div>
           <div className="bars" id="bars">
             <button className="btnBars" id="btnBars" onClick={handleOpenSidebar}>
