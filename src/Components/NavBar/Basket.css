@@ -93,7 +93,6 @@
 .productItem {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 16px;
 }
 
@@ -110,15 +109,16 @@
 
 .itemInfo .ItemName p {
     font-family: 'Mulish', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
-    color: #2e2c36;
+    color: #2e2c36;  
 }
 
 .itemInfo {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: auto;
 }
 
 .itemInfo .price-Quantity-Item {
@@ -174,8 +174,7 @@
 }
 
 .btnDelItem{
-    position:relative;
-    bottom: 40px;
+    margin-bottom: auto;
 }
 
 @media (max-width: 400px) {
