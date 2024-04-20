@@ -8,13 +8,14 @@ const Home = () => {
         url="https://hoteless-hilton.000webhostapp.com/getFood.php"
         render={(data) => {
           return (
+            
             <>
              {data.length > 0 ? (
                 // Filtrar para encontrar el item con ID=9
                 data.filter(data => data.id === "9").map((data) => (
                   <section id="home" key={data.id}
                   style={{
-                    backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.1)), url(${data.img})`,
+                    backgroundImage: `linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.3)), url(${data.img})`,
                   }}
                   >
                     <div className="content" id="content">
