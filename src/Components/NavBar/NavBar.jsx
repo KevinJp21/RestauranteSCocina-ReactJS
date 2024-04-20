@@ -120,8 +120,7 @@ const NavBar = () => {
           <div className="otherSection" id="otherSection">
           <span id="sectionTitle">OTROS</span>
               <a href="#" id="linksOthers">Blog</a>
-              <a href="#" id="linksOthers">Cookies</a>
-              <a href="#" id="linksOthers">Términos y Condicienes</a>
+              <a href="#" id="linksOthers">Términos y Condiciones</a>
               <a href="#" id="linksOthers">Politicas de privacidad</a>
               <a href="#" id="linksOthers">Tratamiento de datos</a>
               <a href="#" id="linksOthers">SIC</a>
