@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import { Rating } from '@mui/material';
 import {
@@ -13,6 +13,8 @@ import {
 } from "mdb-react-ui-kit";
 
 import './menu.css'
+import { BasketContext } from '../contexts/BasketContext';
+
 
 
 function dishRating({ data }) {
@@ -41,6 +43,7 @@ function dishRating({ data }) {
   }
 
   function Cards({ data }) {
+      const {addToBasket} = useContext(BasketContext);
   return (
     <>
     <MDBCol  md="6" lg="4" className="container-fluid m-0 mb-3">
@@ -69,7 +72,7 @@ function dishRating({ data }) {
                 {dishRating({data})}
               <div className="buy">
               <button className='btn btn-buy'> Comprar</button>
-              <button className='cart'><i className="fa-solid fa-cart-shopping"></i></button>
+              <button className='cart'><i className="fa-solid fa-cart-shopping" onClick={()=> addToBasket(data)}></i></button>
               </div>
               
             </MDBCardBody>

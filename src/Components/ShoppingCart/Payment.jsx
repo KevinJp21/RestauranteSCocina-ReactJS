@@ -55,9 +55,7 @@ import {
                           <MDBBtn color="link" className="px-2">
                             <MDBIcon fas icon="minus" />
                           </MDBBtn>
-    
                           <MDBInput type="number" min="0" defaultValue={1} size="sm" />
-    
                           <MDBBtn color="link" className="px-2">
                             <MDBIcon fas icon="plus" />
                           </MDBBtn>
@@ -86,6 +84,8 @@ import {
                       </div>
                     </div>
                   </MDBCol>
+
+
                   <MDBCol lg="4" className="bg-grey">
                     <div className="p-5">
                       <MDBTypography tag="h3" className="fw-bold mb-5 mt-2 pt-1">

@@ -2,6 +2,7 @@ import React, {useEffect, useState } from "react";
 import './NavBar.css'
 import './Basket.css'
 import './sideBar.css'
+import BasketContent from "./BasketContent";
 
 const NavBar = () => {
   const [isOpenSideBar, setIsOpenSideBar] = useState(false);  // Inicialmente el sidebar está cerrado
@@ -162,6 +163,12 @@ const NavBar = () => {
           <div className="locationBasketContent " id="locationBasketContent">
             <i className="fa-solid fa-location-dot" id="locationIcon"></i>
             <span id="locationBasket">Barranquilla, Atlantico, Colombia</span>
+          </div>
+
+          <div className="basketContent" id="basketContent">
+              <div className="basketItem" id="basketItem">
+                  {<BasketContent />}
+              </div>
           </div>
       </div>
  

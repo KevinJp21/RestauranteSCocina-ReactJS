@@ -76,6 +76,21 @@
     color: #2e2c36;
 }
 
+#basketItem{
+    padding: 16px;
+}
+
+/* Ocultar flechas para inputs de tipo número con la clase no-spinners */
+.inputQuantity::-webkit-inner-spin-button,
+.inputQuantity::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.inputQuantity {
+  -moz-appearance: textfield; /* Firefox */
+}
+
 @media (max-width: 400px) {
     #basketContainer {
         min-width: 100%;

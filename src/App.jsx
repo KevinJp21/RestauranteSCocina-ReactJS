@@ -7,19 +7,21 @@ import PopularDish from './Components/PopularDish/PopularDish';
 import Menu from './Components/Menu/Menu';
 import Footer from './Components/Footer/Footer';
 import Contact from './Components/Contact/Contact';
-
+import Payment from './Components/ShoppingCart/Payment';
+import { BasketProvider } from './Components/contexts/BasketContext';
 
 function App() {
   return (
     <>
-      <NavBar />
+    <BasketProvider>
+    <NavBar />
       <Home />
       <About />
       <PopularDish />
       <Menu />
       <Contact />
       <Footer />
-
+    </BasketProvider>
     </>
   );
 }
