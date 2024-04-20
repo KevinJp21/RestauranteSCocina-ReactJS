@@ -2,14 +2,7 @@ import React, { useContext } from 'react';
 import { BasketContext } from '../contexts/BasketContext';
 
 const BasketContent = () => {
-    const { basket, updateQuantity } = useContext(BasketContext);
-
-    const handleQuantityChange = (event, id) => {
-        const newQuantity = parseInt(event.target.value, 10);
-        if (newQuantity >= 0) {
-            updateQuantity(id, newQuantity);
-        }
-    };
+    const { basket, updateQuantity, removeFromBasket } = useContext(BasketContext);
 
     return (
         <>
@@ -38,9 +31,7 @@ const BasketContent = () => {
                                             disabled
                                             type="number"
                                             className="inputQuantity"
-                                            min="1"
                                             value={item.quantity}
-                                            onChange={(event) => handleQuantityChange(event, item.id)}
                                         />
                                         <button className="btnInput" onClick={() => updateQuantity(item.id, item.quantity + 1)}>
                                             <i className="fa-solid fa-plus"></i>
@@ -49,6 +40,10 @@ const BasketContent = () => {
                                 </div>
                             </div>
                         </div>
+
+                        <button className="btnInput btnDelItem" onClick={() => removeFromBasket(item.id)}>
+                            <i className="fa-solid fa-trash"></i>
+                        </button>
                     </div>
                     <div className="lineWrapper"></div>
                 </div>

@@ -98,7 +98,7 @@
 }
 
 .productItem .imgItem img {
-    width: 110px;
+    width: 90px;
     border-radius: 5px;
 }
 
@@ -173,9 +173,17 @@
     color: #2e2c36;
 }
 
+.btnDelItem{
+    position:relative;
+    bottom: 40px;
+}
+
 @media (max-width: 400px) {
     .basketContainer {
         min-width: 100%;
         overflow: auto;
     }
+
+
+
 }
