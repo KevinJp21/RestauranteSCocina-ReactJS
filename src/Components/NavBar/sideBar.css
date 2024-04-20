@@ -43,13 +43,8 @@
 #section1 #closeSideBar i{
     font-size: 20px;
     color: white;
-    transition: all .3s ease-out;
-    border-radius: 11px;
 }
 
-#section1 #closeSideBar:hover i{
-    color: red;
-}
 
 #section1{
     margin:20px;
