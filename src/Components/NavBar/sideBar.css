@@ -38,7 +38,6 @@
     border: none;
     display: flex;
     justify-content: center;
-    margin: 10px 10px 0 0 ;
 }
 
 #section1 #closeSideBar i{
@@ -46,6 +45,14 @@
     color: white;
 }
 
-#section1 a{
-    margin: 10px 0 0 10px !important;
+#section1{
+    margin: 20px 20px 0 20px;
 }
+
+@media (max-width: 400px) {
+    .sideBarContainer {
+        width: 100%;
+    }
+
+}
+  

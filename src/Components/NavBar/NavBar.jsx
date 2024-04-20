@@ -41,7 +41,7 @@ const NavBar = () => {
         
         <div className="sideBarContent">
           <div className="section1" id="section1">
-            <a className="navbar-brand f-lg-5 ms-lg-5 " href="#" id="logo">
+            <a className="navbar-brand f-lg-5 " href="#" id="logo">
               Restaurante S <span className="yellow">Co</span>
               <span className="blue">ci</span>
               <span className="red">na</span>
@@ -55,7 +55,7 @@ const NavBar = () => {
  
   
     <nav className={`navbar navbar-expand-lg ${scroll ? 'scrolled' : ''}`} id="navbar">
-        <div className="container-fluid ms-4 me-4" id="container-fluid">
+        <div className="container-fluid m-0" id="container-fluid">
 
         
           <a className="navbar-brand f-lg-5 ms-lg-2 " href="#" id="logo">
