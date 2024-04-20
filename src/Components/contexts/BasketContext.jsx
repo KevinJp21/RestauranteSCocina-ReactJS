@@ -34,6 +34,7 @@ export const BasketProvider = ({ children }) => {
                         id: data.id,
                         nombre: data.nombre,
                         precio: data.precio,
+                        img: data.img,
                         quantity: 1
                     }
                 ];

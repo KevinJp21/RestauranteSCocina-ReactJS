@@ -80,7 +80,7 @@
     padding: 16px;
 }
 
-/* Ocultar flechas para inputs de tipo número con la clase no-spinners */
+/* Ocultar flechas para inputs de tipo número */
 .inputQuantity::-webkit-inner-spin-button,
 .inputQuantity::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -90,12 +90,92 @@
 .inputQuantity {
   -moz-appearance: textfield; /* Firefox */
 }
+.productItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.productItem .imgItem img {
+    width: 110px;
+    border-radius: 5px;
+}
+
+.itemInfo .ItemName {
+    width: 100%;
+    padding: 0 16px;
+    margin-bottom: 10px;
+}
+
+.itemInfo .ItemName p {
+    font-family: 'Mulish', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #2e2c36;
+}
+
+.itemInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.itemInfo .price-Quantity-Item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2px;
+}
+
+.itemInfo .price-Quantity-Item .priceStyle {
+    padding: 0 16px;
+    font-family: 'Mulish', sans-serif;
+    font-size: 15px;
+    color: #2e2c36;
+}
+
+.itemInfo .price-Quantity-Item .quantityItem {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.quantityItem .inputQuantityContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    padding: 6px;
+    border: 1px solid #2e2c36;
+    border-radius: 20px;
+}
+
+.inputQuantityContainer .inputQuantity {
+    font-family: 'Mulish', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    width: 40px;
+    font-size: 15px;
+    border: none;
+    background-color: rgb(247, 248, 249);
+}
+
+.btnInput {
+    background-color: transparent;
+    border: none;
+}
+
+.btnInput i {
+    font-size: 15px;
+    color: #2e2c36;
+}
 
 @media (max-width: 400px) {
-    #basketContainer {
+    .basketContainer {
         min-width: 100%;
         overflow: auto;
     }
 }
-  
-

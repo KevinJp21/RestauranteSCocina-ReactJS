@@ -154,7 +154,7 @@ const NavBar = () => {
       <div className={`DarkOverlayBasket ${isOpenBasket ? 'DarkOverlayBasketOpen' : ''}`} id="DarkOverlayBasket" onClick={handleCloseBasket}></div>
       <div className={`basketContainer ${isOpenBasket ? 'basketOpen' : ''}`} id="basketContainer">
           <div className="basketLogo" id="basketLogo">
-             <span>Tu carrito</span>
+             <span>Tu canasta</span>
              <button className="closeBasket" id="closeBasket" onClick={handleCloseBasket}>
               <i className="fa-solid fa-circle-xmark"></i>
             </button>

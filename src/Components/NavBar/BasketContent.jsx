@@ -1,18 +1,5 @@
 import React, { useContext } from 'react';
 import { BasketContext } from '../contexts/BasketContext';
-import {
-    MDBBtn,
-    MDBCard,
-    MDBCardBody,
-    MDBCardImage,
-    MDBCardText,
-    MDBCol,
-    MDBContainer,
-    MDBIcon,
-    MDBInput,
-    MDBRow,
-    MDBTypography,
-    } from "mdb-react-ui-kit";
 
 const BasketContent = () => {
     const { basket, updateQuantity } = useContext(BasketContext);
@@ -25,29 +12,48 @@ const BasketContent = () => {
     };
 
     return (
-        <div>
-            {basket.map((item, index) => (
-                <div key={index}>
-                    <h4>{item.nombre} (Cantidad: {item.quantity})</h4>
-                    <p>${Number(item.precio) * item.quantity}</p>
-                    <MDBCol md="3" lg="3" xl="3" className="d-flex align-items-center">
-                        <MDBBtn color="link" className="px-2" onClick={() => updateQuantity(item.id, item.quantity - 1)}>
-                            <MDBIcon fas icon="minus" />
-                        </MDBBtn>
-                        <MDBInput 
-                            type="number" 
-                            className="inputQuantity"
-                            min="0" 
-                            value={item.quantity} 
-                            onChange={(event) => handleQuantityChange(event, item.id)} 
-                            size="sm" />
-                        <MDBBtn color="link" className="px-2" onClick={() => updateQuantity(item.id, item.quantity + 1)}>
-                            <MDBIcon fas icon="plus" />
-                        </MDBBtn>
-                    </MDBCol>
+        <>
+            {basket.map((item) => (
+                <div key={item.id}>
+                    <div className='productItem'>
+                        <div className="imgItem">
+                            <img src={item.img} alt={item.nombre} />
+                        </div>
+
+                        <div className="itemInfo">
+                            <div className="ItemName">
+                                <p className='m-0'>{item.nombre}</p>
+                            </div>
+                            <div className="price-Quantity-Item">
+                                <div className="priceStyle">
+                                    <span>${Number(item.precio) * item.quantity}</span>
+                                </div>
+
+                                <div className="quantityItem">
+                                    <div className="inputQuantityContainer">
+                                        <button className="btnInput" onClick={() => updateQuantity(item.id, item.quantity - 1)}>
+                                            <i className="fa-solid fa-minus"></i>
+                                        </button>
+                                        <input
+                                            disabled
+                                            type="number"
+                                            className="inputQuantity"
+                                            min="1"
+                                            value={item.quantity}
+                                            onChange={(event) => handleQuantityChange(event, item.id)}
+                                        />
+                                        <button className="btnInput" onClick={() => updateQuantity(item.id, item.quantity + 1)}>
+                                            <i className="fa-solid fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="lineWrapper"></div>
                 </div>
             ))}
-        </div>
+        </>
     );
 }
 
