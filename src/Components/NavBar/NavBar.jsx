@@ -50,6 +50,11 @@ const NavBar = () => {
               <i className="fa-solid fa-circle-xmark"></i>
             </button>
           </div>
+
+          <div className="section2" id="section2">
+              <button className="BtnSign" id="BtnSign"><span>Iniciar sesión</span></button>
+              <button className="BtnSign" id="BtnSign"><span>Registro</span></button>
+          </div>
         </div>
       </div>
  

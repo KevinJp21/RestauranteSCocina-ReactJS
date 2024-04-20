@@ -43,15 +43,51 @@
 #section1 #closeSideBar i{
     font-size: 20px;
     color: white;
+    transition: all .3s ease-out;
+    border-radius: 11px;
+}
+
+#section1 #closeSideBar:hover i{
+    color: red;
 }
 
 #section1{
-    margin: 20px 20px 0 20px;
+    margin:20px;
+}
+
+#section2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+#BtnSign{
+    width: 150px;
+    height: 36px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(0, 140, 255);
+    color: white;
+    font-family: 'Mulish',sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all .3s ease-in-out;
+
+}
+
+#BtnSign:hover{
+    background-color: rgba(0, 140, 255, 0.8);
 }
 
 @media (max-width: 400px) {
-    .sideBarContainer {
+    #sideBarContainer {
         width: 100%;
+    }
+
+    #BtnSign{
+        font-size: 12px;
     }
 
 }
