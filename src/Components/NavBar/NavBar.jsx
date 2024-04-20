@@ -40,8 +40,9 @@ const NavBar = () => {
       <div className={`sideBarContainer ${isOpen ? 'sideBarOpen' : ''}`} id="sideBarContainer">
         
         <div className="sideBarContent">
+          
           <div className="section1" id="section1">
-            <a className="navbar-brand f-lg-5 " href="#" id="logo">
+            <a className="navbar-brand f-lg-5 logoSidebar" href="#" id="logo">
               Restaurante S <span className="yellow">Co</span>
               <span className="blue">ci</span>
               <span className="red">na</span>
@@ -51,10 +52,92 @@ const NavBar = () => {
             </button>
           </div>
 
+          <div className="lineWrapper"></div>
+
           <div className="section2" id="section2">
-              <button className="BtnSign" id="BtnSign"><span>Iniciar sesión</span></button>
+            <div className="containerButtons" id="containerButtons">
+            <button className="BtnSign" id="BtnSign"><span>Iniciar sesión</span></button>
               <button className="BtnSign" id="BtnSign"><span>Registro</span></button>
+            </div>
           </div>
+
+          <div className="lineWrapper"></div>
+
+          <div className="section3" id="section3">
+            <span id="sectionTitle">SECCIONES</span>
+
+            <div className="sectionListStyle_Container" id="sectionListStyle_Container">
+              <ul className="sectionListStyle" id="sectionListStyle">
+                <li className="sectionListStyleItem">
+                  <a href="#home" id="linkSection" onClick={handleCloseSidebar}>
+                  <span className="titleItemSection" id="titleItemSection">
+                    Inicio
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"><path fill="#6A696E" d="M7.38 21.01c.49.49 1.28.49 1.77 0l8.31-8.31a.996.996 0 000-1.41L9.15 2.98c-.49-.49-1.28-.49-1.77 0s-.49 1.28 0 1.77L14.62 12l-7.25 7.25c-.48.48-.48 1.28.01 1.76z"></path></svg>
+                  </a>
+                  </li>
+
+                  <li className="sectionListStyleItem">
+                  <a href="#about" id="linkSection" onClick={handleCloseSidebar}>
+                  <span className="titleItemSection" id="titleItemSection">
+                    Sobre nosotros
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"><path fill="#6A696E" d="M7.38 21.01c.49.49 1.28.49 1.77 0l8.31-8.31a.996.996 0 000-1.41L9.15 2.98c-.49-.49-1.28-.49-1.77 0s-.49 1.28 0 1.77L14.62 12l-7.25 7.25c-.48.48-.48 1.28.01 1.76z"></path></svg>
+                  </a>
+                  </li>
+
+                  <li className="sectionListStyleItem">
+                  <a href="#popular-dish" id="linkSection" onClick={handleCloseSidebar}>
+                  <span className="titleItemSection" id="titleItemSection">
+                    Comidas popularos
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"><path fill="#6A696E" d="M7.38 21.01c.49.49 1.28.49 1.77 0l8.31-8.31a.996.996 0 000-1.41L9.15 2.98c-.49-.49-1.28-.49-1.77 0s-.49 1.28 0 1.77L14.62 12l-7.25 7.25c-.48.48-.48 1.28.01 1.76z"></path></svg>
+                  </a>
+                  </li>
+
+                  <li className="sectionListStyleItem">
+                  <a href="#menu" id="linkSection" onClick={handleCloseSidebar}>
+                  <span className="titleItemSection" id="titleItemSection">
+                    Nuestro menú
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"><path fill="#6A696E" d="M7.38 21.01c.49.49 1.28.49 1.77 0l8.31-8.31a.996.996 0 000-1.41L9.15 2.98c-.49-.49-1.28-.49-1.77 0s-.49 1.28 0 1.77L14.62 12l-7.25 7.25c-.48.48-.48 1.28.01 1.76z"></path></svg>
+                  </a>
+                  </li>
+
+                  <li className="sectionListStyleItem">
+                  <a href="#contact" id="linkSection" onClick={handleCloseSidebar}>
+                  <span className="titleItemSection" id="titleItemSection">
+                    Contactanos
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"><path fill="#6A696E" d="M7.38 21.01c.49.49 1.28.49 1.77 0l8.31-8.31a.996.996 0 000-1.41L9.15 2.98c-.49-.49-1.28-.49-1.77 0s-.49 1.28 0 1.77L14.62 12l-7.25 7.25c-.48.48-.48 1.28.01 1.76z"></path></svg>
+                  </a>
+                  </li>
+              </ul>
+          </div>
+          </div>
+          <div className="lineWrapper"></div>
+
+          <div className="otherSection" id="otherSection">
+          <span id="sectionTitle">OTROS</span>
+              <a href="#" id="linksOthers">Blog</a>
+              <a href="#" id="linksOthers">Cookies</a>
+              <a href="#" id="linksOthers">Términos y Condicienes</a>
+              <a href="#" id="linksOthers">Politicas de privacidad</a>
+              <a href="#" id="linksOthers">Tratamiento de datos</a>
+              <a href="#" id="linksOthers">SIC</a>
+          </div>
+
+          <div className="lineWrapper"></div>
+
+          <div className="countryContainer" id="countryContainer">
+            <span className="Country" id="Country">
+              <img src="https://images.rappi.com/web-assets/col-flag.png" alt="Colombia" />
+              <span className="CountryName" id="CountryName">Colombia</span>
+              <svg className="ms-auto" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"><path fill="#6A696E" d="M7.38 21.01c.49.49 1.28.49 1.77 0l8.31-8.31a.996.996 0 000-1.41L9.15 2.98c-.49-.49-1.28-.49-1.77 0s-.49 1.28 0 1.77L14.62 12l-7.25 7.25c-.48.48-.48 1.28.01 1.76z"></path></svg>
+            </span>
+          </div>
+
+          <div className="lineWrapper"></div>
         </div>
       </div>
  
