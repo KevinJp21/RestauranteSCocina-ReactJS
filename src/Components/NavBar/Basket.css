@@ -4,7 +4,7 @@
     right: 0;
     width: 100%;
     max-width: 375px;
-    height: 100vh;
+    height: 96vh;
     background-color: rgb(247, 248, 249);
     z-index: 1000;
     transform: translateX(100%);
