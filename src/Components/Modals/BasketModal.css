@@ -1,0 +1,75 @@
+.css-3hcm5q{
+background-color: white;
+border-radius: 10px;
+max-width: 512px;
+}
+
+.HeaderModal{
+    padding: 16px 24px;
+}
+
+.HeaderModal p{
+    font-family: 'Mulish',sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #2e2c36;
+}
+
+.ModalTextContainer{
+    padding: 24px;
+}
+
+.ModalTextContainer span{
+    font-family: 'Mulish', sans-serif;
+    color: #6A696E;
+}
+
+.btnContainerModal{
+    padding: 16px 24px;
+    display: flex;
+    justify-content: right;
+}
+
+.btnContainerModal button{
+    padding: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnContainerModal button span{
+    font-family: 'Mulish',sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #2e2c36;
+}
+
+.btnContainerModal .btnConfirmDel{
+    background-color: rgb(0, 140, 255);
+    width: 162px;
+    height: 48px;
+    border-radius: 10px;
+    margin-left: 32px;
+    transition: all .3s ease-in-out;
+}
+
+.btnContainerModal .btnConfirmDel:hover{
+    background-color: rgb(0, 122, 221);
+}
+
+
+.btnContainerModal .btnConfirmDel span{
+   color: #FFF;
+}
+
+.btnContainerModal .btnCancelDel span{
+    color: #B3B9C2;
+}
+
+
+@media (max-width: 570px) {
+    .css-3hcm5q{
+        width: 100% !important;
+    }
+}
