@@ -18,7 +18,7 @@ const BasketModal = ({ open, onClose, onConfirm }) => {
             slots={{ backdrop: Backdrop }}
             slotProps={{
               backdrop: {
-                timeout: 500,
+                timeout: 200,
               },
             }}
         >
@@ -26,6 +26,9 @@ const BasketModal = ({ open, onClose, onConfirm }) => {
                 <Box sx={style}>
                     <div className='HeaderModal'>
                         <p>¿Seguro?</p>
+                        <button className="closeModal" id="closeModal" onClick={onClose}>
+                        <i className="fa-solid fa-circle-xmark"></i>
+            </button>
                     </div>
                         <div className="ModalTextContainer">
                             <span>¿Estás seguro de que deseas eliminar todos los productos de la canasta?</span>
