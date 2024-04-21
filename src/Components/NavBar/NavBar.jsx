@@ -15,7 +15,7 @@ const NavBar = () => {
   };
 
   // Función para cerrar el sidebar
-  const handleCloseSidebar = () => {
+   const handleCloseSidebar = () => {
     setIsOpenSideBar(false);
   };
 

@@ -67,7 +67,7 @@ function dishRating({ data }) {
 
               <div className="d-flex justify-content-between mb-3">
                 <h5 className="mb-0">{data.nombre}</h5>
-                <h5 className="text-dark mb-0">${data.precio}</h5>
+                <h5 className="text-dark mb-0">${Number(data.precio).toLocaleString('es-CO')}</h5> {/*toLocaleString('es-CO')= Formatea los valores de acuerdo al pais */}
               </div>
                 {dishRating({data})}
               <div className="buy">
