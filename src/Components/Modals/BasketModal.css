@@ -80,6 +80,10 @@ max-width: 512px;
    color: #FFF;
 }
 
+.btnContainerModal .btnCancelDel{
+    background-color: transparent;
+}
+
 .btnContainerModal .btnCancelDel span{
     color: #B3B9C2;
 }
