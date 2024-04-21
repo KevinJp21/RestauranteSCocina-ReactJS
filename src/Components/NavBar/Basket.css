@@ -181,7 +181,7 @@
 }
 
 .inputQuantity {
-  -moz-appearance: textfield; /* Firefox */
+   appearance: textfield;
 }
 .productItem {
     display: flex;
