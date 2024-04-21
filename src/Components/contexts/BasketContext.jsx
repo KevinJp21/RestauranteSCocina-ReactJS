@@ -1,13 +1,22 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 
 export const BasketContext = createContext(null);
 
 export const BasketProvider = ({ children }) => {
-    const [basket, setBasket] = useState([]);
+    const [basket, setBasket] = useState(() => {
+        // Intentar recuperar la canasta desde LocalStorage al inicializar
+        const savedBasket = localStorage.getItem('basket');
+        return savedBasket ? JSON.parse(savedBasket) : [];
+    });
+
+    // Escuchar cambios en el estado del de la canasta y los guarda en local storage
+    useEffect(() => {
+        localStorage.setItem('basket', JSON.stringify(basket));//stringfy convierte el objeto en una cadena de texto
+    }, [basket]);
 
     const updateQuantity = (id, quantity) => {
         if (quantity < 1) {
-            removeFromBasket(id);  // Elimina el producto si la cantidad es menor que 1
+            removeFromBasket(id);
         } else {
             setBasket(currentItems => {
                 return currentItems.map(item => {
@@ -20,14 +29,14 @@ export const BasketProvider = ({ children }) => {
         }
     };
 
-    const removeAllFromBasket = ()=>{
-        setBasket([]);
-    }
-
     const removeFromBasket = (id) => {
         setBasket(currentItems => {
             return currentItems.filter(item => item.id !== id);
         });
+    };
+
+    const removeAllFromBasket = () => {
+        setBasket([]);
     };
 
     const addToBasket = (data) => {
