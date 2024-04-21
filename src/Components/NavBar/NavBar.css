@@ -1,4 +1,4 @@
-#navbar{
+#navbar {
     background-color: transparent;
     display: flex;
     justify-content: center;
@@ -11,105 +11,125 @@
     z-index: 1000;
 }
 
-#container-fluid{
+#container-fluid {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
 }
 
-.scrolled{
+.scrolled {
     background-color: black !important;
 }
-#logo{
+
+#logo {
     font-family: 'Arima Madurai', cursive;
     font-size: 20px;
-    color: white ;
+    color: white;
 }
 
-.yellow{
+.yellow {
     color: yellow;
 }
 
-.blue{
+.blue {
     color: rgb(0, 140, 255);
 }
 
-.red{
+.red {
     color: red;
 }
 
-#ContainerNavContent{
+#ContainerNavContent {
     display: flex;
 
 }
 
-#locationContent{
+#locationContent {
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-#locationIcon{
+#locationIcon {
     font-size: 20px;
     color: yellow;
 }
 
-#locationName{
-    font-family: 'Mulish',sans-serif;
+#locationName {
+    font-family: 'Mulish', sans-serif;
     color: white;
     font-size: 13px;
 }
 
-#locationContent-show{
+#locationContent-show {
     display: none;
 }
 
-#userContentLogin a{
+#userContentLogin a {
     display: flex;
     gap: 10px;
     align-items: center;
     cursor: pointer;
 }
 
-#userContentLogin:hover i,#userContentLogin:hover span{
+#userContentLogin:hover i,
+#userContentLogin:hover span {
     color: rgb(0, 140, 255) !important;
 }
 
-#userIcon{
+#userIcon {
     font-size: 20px;
     color: white;
     transition: .3s;
 }
 
-#userContentLogin #login{
-    font-family: 'Mulish',sans-serif;
+#userContentLogin #login {
+    font-family: 'Mulish', sans-serif;
     color: white;
     font-size: 13px;
     transition: .3s;
 }
 
-#cartShopping{
+#cartShopping {
     width: 50x;
     padding: 4px;
 
 }
 
-#cartShopping button{
+#cartShopping button {
     width: 100%;
     background-color: transparent;
     border: none;
 }
 
-#cartShopping button i{
+#cartShopping button i {
     color: white;
     transition: .3s;
 }
 
-#cartShopping button i:hover{
+#cartShopping button i:hover {
     color: rgb(0, 140, 255);
 }
 
-#bars{
+.QuantityItemsBasket {
+    position: absolute;
+    top: 10px;
+    right: 31px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 700;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0 6px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+}
+
+#bars {
     width: 20px;
 
 }
@@ -123,7 +143,7 @@
     align-items: center;
 }
 
-#bars button i{
+#bars button i {
     color: white;
     transition: .3s;
     font-size: 20px;
@@ -136,11 +156,11 @@
 
 
 @media (max-width: 992px) {
-    #locationContent{
+    #locationContent {
         display: none;
     }
 
-    #locationContent-show{
+    #locationContent-show {
         display: flex;
         width: 100%;
         justify-content: center;
@@ -149,27 +169,27 @@
 
     }
 
-    #navbar{
+    #navbar {
         height: 84px;
     }
 
-    #basketContainer{
-        
-        top:84px !important;
+    #basketContainer {
+
+        top: 84px !important;
     }
 }
 
 @media (max-width: 435px) {
-    #userContentLogin span{
+    #userContentLogin span {
         display: none;
     }
 
-    #logo{
+    #logo {
         font-size: 15px;
     }
 
-    #locationContent-show span, #locationContent-show i {
+    #locationContent-show span,
+    #locationContent-show i {
         font-size: 10px;
     }
 }
-  

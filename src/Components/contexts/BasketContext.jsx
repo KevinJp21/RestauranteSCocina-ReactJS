@@ -20,6 +20,10 @@ export const BasketProvider = ({ children }) => {
         }
     };
 
+    const removeAllFromBasket = ()=>{
+        setBasket([]);
+    }
+
     const removeFromBasket = (id) => {
         setBasket(currentItems => {
             return currentItems.filter(item => item.id !== id);
@@ -55,7 +59,7 @@ export const BasketProvider = ({ children }) => {
     };
 
     return (
-        <BasketContext.Provider value={{ basket, addToBasket, updateQuantity, removeFromBasket }}>
+        <BasketContext.Provider value={{ basket, addToBasket, updateQuantity, removeFromBasket, removeAllFromBasket }}>
             {children}
         </BasketContext.Provider>
     );

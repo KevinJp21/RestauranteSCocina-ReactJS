@@ -1,10 +1,15 @@
-import React, {useEffect, useState } from "react";
+import React, {useEffect, useState, useContext } from "react";
+import { BasketContext } from "../contexts/BasketContext";
 import './NavBar.css'
 import './Basket.css'
 import './sideBar.css'
 import BasketContent from "./BasketContent";
 
 const NavBar = () => {
+  const { basket } = useContext(BasketContext);
+   // Calcular el total de ítems en la canasta
+  const itemCount = basket.reduce((total, item) => total + item.quantity, 0);
+
   const [isOpenSideBar, setIsOpenSideBar] = useState(false);  // Inicialmente el sidebar está cerrado
   const [isOpenBasket, setIsOpenBasket] = useState(false);  // Inicialmente el sidebar está cerrado
   const [scroll, setScroll] = useState(false);
@@ -19,12 +24,12 @@ const NavBar = () => {
     setIsOpenSideBar(false);
   };
 
-   // Función para abrir el carrito
+   // Función para abrir la canasta
    const handleOpenBasket = () => {
     setIsOpenBasket(true);
   };
 
-  // Función para cerrar el carrito
+  // Función para cerrar la canasta
   const handleCloseBasket = () => {
     setIsOpenBasket(false);
   };
@@ -195,12 +200,19 @@ const NavBar = () => {
 
           <div className="cartShopping" id="cartShopping">
             <button className="btnBasket" id="btnBasket" onClick={handleOpenBasket}><i className="fa-solid fa-cart-shopping"></i></button>
+            {itemCount > 0 && (
+                <span className="QuantityItemsBasket">
+                    {itemCount}
+                </span>
+            )}
           </div>
           <div className="bars" id="bars">
             <button className="btnBars" id="btnBars" onClick={handleOpenSidebar}>
               <i className="fa-solid fa-bars"></i>
             </button>
+            
           </div>
+
           <div className="locationContent-show col-12" id="locationContent-show">
             <i className="fa-solid fa-location-dot" id="locationIcon"></i>
             <span id="locationName">Barranquilla, Atlantico, Colombia</span>

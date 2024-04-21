@@ -61,7 +61,7 @@ function dishRating({ data }) {
                   </a>
                 </p>
                 <p className="small text-danger">
-                  <s>${data.precio}</s>
+                  <s>${Number(data.precio).toLocaleString('es-CO')}</s>
                 </p>
               </div>
 

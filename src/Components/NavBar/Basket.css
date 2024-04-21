@@ -275,6 +275,7 @@
         overflow: auto;
     }
 
-
-
+    .btnBuyProducts .btnContent p{
+        font-size: 14px;
+    }
 }
