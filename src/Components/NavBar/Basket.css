@@ -8,8 +8,9 @@
     background-color: rgb(247, 248, 249);
     z-index: 1000;
     transform: translateX(100%);
-    transition: transform .4s ease;
+    transition: transform .3s ease;
     overflow: auto;
+
 }
 
 .basketOpen{
@@ -198,6 +199,8 @@
     width: 100%;
     padding: 0 16px;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .itemInfo .ItemName p {
@@ -211,7 +214,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: auto;
+    width: 100%;
+   
 }
 
 .itemInfo .price-Quantity-Item {

@@ -42,6 +42,10 @@ const BasketContent = () => {
                         <div className="itemInfo">
                             <div className="ItemName">
                                 <p className='m-0'>{item.nombre}</p>
+                                
+                        <button className="btnInput btnDelItem" onClick={() => removeFromBasket(item.id)}>
+                            <i className="fa-solid fa-trash"></i>
+                        </button>
                             </div>
                             <div className="price-Quantity-Item">
                                 <div className="priceStyle">
@@ -67,9 +71,6 @@ const BasketContent = () => {
                             </div>
                         </div>
 
-                        <button className="btnInput btnDelItem" onClick={() => removeFromBasket(item.id)}>
-                            <i className="fa-solid fa-trash"></i>
-                        </button>
                     </div>
                     <div className="lineWrapper"></div>
                 </div>
