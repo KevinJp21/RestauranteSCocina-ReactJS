@@ -8,6 +8,7 @@
     z-index: 1002;
     transform: translateX(-100%);
     transition: transform .4s ease;
+    overflow-y:auto;
   }
 
   .logoSidebar{
@@ -219,7 +220,6 @@ padding: 16px 0 16px 0;
 @media (max-width: 400px) {
     #sideBarContainer {
         min-width: 100%;
-        overflow: auto;
     }
 
     #BtnSign{
