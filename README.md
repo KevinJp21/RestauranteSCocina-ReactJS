@@ -41,3 +41,6 @@ npm install
 
 # Run the app
 npm run dev
+```
+## Author
+- [@KevinJp21](https://github.com/KevinJp21)
